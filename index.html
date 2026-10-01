@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COD Anti-Rejection Toolkit — Stop losing money on rejected cash-on-delivery orders</title>
+<meta name="description" content="Arabic scripts, WhatsApp templates and an n8n workflow that cut rejected cash-on-delivery orders in Saudi Arabia and the UAE. Three tiers, $9 / $29 / $79.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0A0E14">
+<meta property="og:type" content="website">
+<meta property="og:title" content="COD Anti-Rejection Toolkit — cut rejected cash-on-delivery orders">
+<meta property="og:description" content="Arabic scripts, WhatsApp templates and an n8n workflow for COD sellers in Saudi Arabia and the UAE. Three tiers: $9 / $29 / $79.">
+<noscript><style>.reveal,.in{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+  :root{
+    --bg:#0A0E14;
+    --panel:#121A26;
+    --panel-2:#0E1620;
+    --text:#E8EDF4;
+    --muted:#8A97A8;
+    --line:rgba(255,255,255,.08);
+    --basic:#2DD4BF;
+    --pro:#F5B544;
+    --auto:#9B7BFF;
+    --gold:#F5B544;
+    --radius-lg:20px;
+    --radius-sm:12px;
+    --maxw:1180px;
+    --font-head:"Bricolage Grotesque","Segoe UI Semibold","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+    --font-body:"Inter","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-body);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  img,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  h1,h2,h3,.display{font-family:var(--font-head);font-weight:700;letter-spacing:-.02em;line-height:1.08;overflow-wrap:break-word}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(10,14,20,.82);
+    backdrop-filter:saturate(160%) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;gap:26px;height:70px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--font-head);font-weight:700;font-size:16.5px;letter-spacing:-.01em;white-space:nowrap}
+  .brand .mark{
+    width:26px;height:26px;border-radius:8px;flex:0 0 auto;
+    background:linear-gradient(135deg,var(--basic),var(--auto));
+    box-shadow:0 0 0 1px rgba(255,255,255,.10) inset;
+  }
+  .nav-links{display:flex;gap:24px;margin-left:auto;font-size:15px;color:var(--muted)}
+  .nav-links a:hover{color:var(--text)}
+  .nav .btn{margin-left:6px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    font-family:var(--font-body);font-weight:600;font-size:15px;
+    padding:11px 20px;border-radius:11px;border:1px solid transparent;
+    cursor:pointer;transition:transform .18s ease,background .18s ease,border-color .18s ease,box-shadow .18s ease;
+  }
+  .btn-gold{background:var(--gold);color:#1A1204;box-shadow:0 8px 26px -12px rgba(245,181,68,.75)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 32px -12px rgba(245,181,68,.9)}
+  .btn-ghost{background:transparent;color:var(--text);border-color:rgba(255,255,255,.16)}
+  .btn-ghost:hover{border-color:rgba(255,255,255,.36);transform:translateY(-2px)}
+
+  /* ---------- hero ---------- */
+  .hero{padding:78px 0 68px;position:relative;overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;inset:-20% -10% auto -10%;height:640px;pointer-events:none;
+    background:
+      radial-gradient(620px 340px at 78% 6%,rgba(45,212,191,.16),transparent 68%),
+      radial-gradient(560px 340px at 12% 0%,rgba(155,123,255,.13),transparent 70%);
+  }
+  .hero .wrap{position:relative;display:grid;grid-template-columns:1.06fr .94fr;gap:56px;align-items:center}
+  .pill{
+    display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;color:#CFE9E4;
+    border:1px solid rgba(45,212,191,.35);background:rgba(45,212,191,.08);
+    padding:7px 14px;border-radius:999px;margin-bottom:24px;
+  }
+  .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--basic);box-shadow:0 0 10px var(--basic)}
+  h1{font-size:clamp(31px,8.2vw,62px);margin-bottom:20px;hyphens:auto;-webkit-hyphens:auto}
+  h1 .accent{color:var(--basic)}
+  .lede{font-size:clamp(17px,1.35vw,20px);color:#B7C3D4;max-width:560px;margin-bottom:30px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .cta-row .btn{padding:14px 24px;font-size:15.5px}
+  .trust{margin-top:26px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 22px}
+  .trust span{display:inline-flex;align-items:center;gap:8px}
+  .trust i{width:6px;height:6px;border-radius:50%;background:var(--muted);opacity:.7}
+
+  /* chat mock */
+  .chat{
+    background:linear-gradient(180deg,#111A26,#0D141D);
+    border:1px solid var(--line);border-radius:var(--radius-lg);
+    box-shadow:0 40px 90px -50px rgba(0,0,0,.9);
+    overflow:hidden;
+  }
+  .chat-top{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}
+  .chat-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--basic),#1b8f80);flex:0 0 auto}
+  .chat-top .who{font-size:14.5px;font-weight:600}
+  .chat-top .sub{font-size:12.5px;color:var(--basic)}
+  .chat-top .live{margin-left:auto;font-size:11.5px;color:var(--muted);border:1px solid var(--line);padding:4px 10px;border-radius:999px}
+  .thread{padding:20px 18px 6px;display:flex;flex-direction:column;gap:16px}
+  .msg{max-width:86%}
+  .msg .tag{font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--muted);margin-bottom:6px}
+  .bubble{padding:11px 14px;border-radius:14px;font-size:14.5px;line-height:1.5}
+  .msg.sys .bubble{background:rgba(45,212,191,.10);border:1px solid rgba(45,212,191,.26);border-top-left-radius:5px}
+  .msg.buyer{align-self:flex-end;text-align:right}
+  .msg.buyer .tag{text-align:right}
+  .msg.buyer .bubble{background:rgba(255,255,255,.06);border:1px solid var(--line);border-top-right-radius:5px;direction:rtl;text-align:right;font-size:15px}
+  .msg .en{display:block;font-size:12.5px;color:var(--muted);margin-top:6px;direction:ltr;text-align:left}
+  .msg.buyer .en{text-align:right}
+  .status-row{display:flex;flex-wrap:wrap;gap:8px;padding:16px 18px 20px;border-top:1px solid var(--line);margin-top:14px;background:rgba(255,255,255,.015)}
+  .chip{font-size:12px;font-weight:600;padding:6px 11px;border-radius:999px;border:1px solid var(--line);color:#B7C3D4}
+  .chip.ok{color:#BFF3EA;border-color:rgba(45,212,191,.4);background:rgba(45,212,191,.09)}
+  .chip.ok::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--basic);margin-right:7px;vertical-align:middle}
+  .chat-note{font-size:12.5px;color:var(--muted);margin-top:12px;text-align:center}
+
+  /* ---------- sections ---------- */
+  section{padding:76px 0;border-top:1px solid var(--line)}
+  .sec-head{max-width:660px;margin-bottom:44px}
+  .kicker{font-size:14px;font-weight:600;color:var(--basic);margin-bottom:12px}
+  h2{font-size:clamp(28px,3.4vw,40px);margin-bottom:14px}
+  .sec-head p{color:#A9B6C8;font-size:17.5px}
+
+  /* pain */
+  .pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+  .stat-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);padding:24px 22px}
+  .stat .big{font-family:var(--font-head);font-weight:700;font-size:clamp(34px,4vw,46px);letter-spacing:-.03em;color:var(--pro);line-height:1}
+  .stat .lbl{font-size:14.5px;color:var(--muted);margin-top:10px}
+  .stat .big.teal{color:var(--basic)}
+  .loss{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);padding:26px 24px}
+  .loss h3{font-size:19px;margin-bottom:6px}
+  .loss .cap{font-size:14px;color:var(--muted);margin-bottom:16px}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  .loss td{padding:10px 0;border-bottom:1px solid var(--line);color:#C7D2E0}
+  .loss td:last-child{text-align:right;font-variant-numeric:tabular-nums;color:var(--text)}
+  .loss tr.total td{border-bottom:none;padding-top:16px;font-weight:700;font-size:18px;color:var(--pro);font-family:var(--font-head)}
+  .pain-copy p{color:#A9B6C8;margin-bottom:16px}
+  .pain-copy strong{color:var(--text)}
+
+  /* steps */
+  .steps{display:grid;gap:14px}
+  .step{display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:center;background:var(--panel-2);border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px 22px}
+  .step .num{font-family:var(--font-head);font-weight:700;font-size:20px;color:var(--basic);background:rgba(45,212,191,.09);border:1px solid rgba(45,212,191,.24);border-radius:10px;text-align:center;padding:9px 0}
+  .step .txt strong{display:block;font-size:16.5px;font-weight:600}
+  .step .txt span{font-size:14px;color:var(--muted)}
+  .step .meta{font-size:12.5px;color:var(--muted);border:1px solid var(--line);padding:5px 11px;border-radius:999px;white-space:nowrap}
+
+  /* pricing */
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+  .tier{
+    --accent:var(--basic);
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-lg);
+    padding:30px 26px 28px;position:relative;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
+  }
+  .tier:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.16)}
+  .tier.basic{--accent:var(--basic)}
+  .tier.pro{--accent:var(--pro);border-color:rgba(245,181,68,.45);box-shadow:0 30px 80px -50px rgba(245,181,68,.65)}
+  .tier.auto{--accent:var(--auto)}
+  .tier .flag{
+    position:absolute;top:-13px;left:26px;font-size:12px;font-weight:700;letter-spacing:.02em;
+    background:var(--pro);color:#1A1204;padding:5px 12px;border-radius:999px;
+  }
+  .tier .tname{font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--accent);margin-bottom:12px}
+  .tier .price{font-family:var(--font-head);font-weight:700;font-size:44px;letter-spacing:-.03em;line-height:1;margin-bottom:6px}
+  .tier .price small{font-size:16px;font-weight:600;color:var(--muted);letter-spacing:0}
+  .tier .tagline{font-size:14.5px;color:var(--muted);min-height:44px;margin-bottom:20px}
+  .tier ul{list-style:none;display:grid;gap:11px;margin-bottom:24px}
+  .tier li{font-size:14.5px;color:#C7D2E0;display:grid;grid-template-columns:18px 1fr;gap:10px;line-height:1.45}
+  .tier li::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--accent);transform:rotate(45deg);margin-top:7px}
+  .tier .btn{width:100%}
+  .tier .buy-note{font-size:12.5px;color:var(--muted);text-align:center;margin-top:12px}
+  .cumulative{margin-top:30px;text-align:center;font-size:15.5px;color:#B7C3D4}
+  .cumulative strong{color:var(--text)}
+
+  /* what you get */
+  .compare{width:100%;border-collapse:collapse;font-size:15px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden}
+  .compare th,.compare td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}
+  .compare thead th{font-size:13px;letter-spacing:.03em;color:var(--muted);font-weight:600;background:rgba(255,255,255,.02)}
+  .compare thead th:nth-child(2){color:var(--basic)}
+  .compare thead th:nth-child(3){color:var(--pro)}
+  .compare thead th:nth-child(4){color:var(--auto)}
+  .compare td:not(:first-child),.compare th:not(:first-child){text-align:center}
+  .compare tr:last-child td{border-bottom:none}
+  .yes{color:#BFF3EA;font-weight:700}
+  .no{color:#4C5666}
+
+  /* requirements */
+  .req-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .req{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);padding:22px}
+  .req h3{font-size:16.5px;margin-bottom:8px}
+  .req p{font-size:14.5px;color:var(--muted)}
+  .notes{margin-top:26px;background:var(--panel-2);border:1px solid var(--line);border-radius:var(--radius-sm);padding:22px 24px}
+  .notes h3{font-size:16px;margin-bottom:12px}
+  .notes ul{list-style:none;display:grid;gap:9px}
+  .notes li{font-size:14.5px;color:#B7C3D4;display:grid;grid-template-columns:16px 1fr;gap:10px}
+  .notes li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--muted);margin-top:8px}
+
+  /* faq */
+  .faq{display:grid;gap:12px;max-width:860px}
+  details{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);padding:0 22px}
+  details summary{cursor:pointer;list-style:none;padding:18px 0;font-size:16.5px;font-weight:600;display:flex;justify-content:space-between;gap:18px;align-items:center}
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"+";font-size:22px;color:var(--muted);font-weight:400;line-height:1}
+  details[open] summary::after{content:"\2013"}
+  details p{font-size:15px;color:#A9B6C8;padding-bottom:20px;max-width:720px}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);background:#080B10;padding:60px 0 40px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:44px}
+  .foot-brand p{font-size:14.5px;color:var(--muted);max-width:340px;margin-top:14px}
+  .foot h4{font-size:13px;letter-spacing:.05em;color:var(--muted);margin-bottom:14px;font-weight:600}
+  .foot ul{list-style:none;display:grid;gap:10px;font-size:14.5px}
+  .foot a:hover{color:var(--text)}
+  .foot .mail{color:var(--gold);font-weight:600}
+  .legal{border-top:1px solid var(--line);padding-top:26px;font-size:13.5px;color:var(--muted);display:grid;gap:10px}
+  .legal p{max-width:900px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.22,.7,.3,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}.d5{animation-delay:.45s}
+  .in{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.7,.3,1)}
+  .in.vis{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{animation:none;opacity:1;transform:none}
+    .in{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+    .btn:hover,.tier:hover{transform:none}
+  }
+
+  .b-short{display:none}
+
+  /* responsive */
+  @media (max-width:1000px){
+    .hero .wrap{grid-template-columns:1fr;gap:44px}
+    .pain-grid{grid-template-columns:1fr}
+    .tiers{grid-template-columns:1fr;gap:26px}
+    .tier.pro{order:-1}
+    .req-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:30px}
+  }
+  @media (max-width:760px){
+    body{font-size:16px}
+    .wrap{padding:0 20px}
+    .nav-links{display:none}
+    .nav{gap:14px}
+    section{padding:58px 0}
+    .hero{padding:52px 0 50px}
+    .stat-cards{grid-template-columns:1fr}
+    .step{grid-template-columns:52px 1fr;row-gap:8px}
+    .step .meta{grid-column:2;justify-self:start}
+    .compare{font-size:13.5px}
+    .compare th,.compare td{padding:11px 10px}
+    .cta-row .btn{width:100%}
+    .nav .btn{flex:0 0 auto}
+    .brand{flex:0 0 auto}
+  }
+  @media (max-width:400px){
+    .wrap{padding:0 16px}
+    .compare{font-size:12.5px}
+    .compare th,.compare td{padding:9px 7px}
+  }
+  @media (max-width:430px){
+    .b-full{display:none}
+    .b-short{display:inline}
+    .nav{gap:12px}
+    .nav .btn{padding:10px 14px;font-size:14.5px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="mark"></span><span class="b-full">COD Anti-Rejection Toolkit</span><span class="b-short">COD Toolkit</span></a>
+    <nav class="nav-links">
+      <a href="#problem">The problem</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-gold" href="#pricing">See the kits</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="border-top:none">
+    <div class="wrap">
+      <div>
+        <span class="pill reveal d1"><span class="dot"></span>Built for COD sellers in Saudi Arabia &amp; the UAE</span>
+        <h1 class="reveal d2">Stop losing money on <span class="accent">rejected</span> cash-on-delivery orders.</h1>
+        <p class="lede reveal d3">Reach the buyer in Arabic before the courier arrives. Copy-paste scripts, WhatsApp templates and an automation workflow that turn "I don't want it anymore" into a delivered order.</p>
+        <div class="cta-row reveal d4">
+          <a class="btn btn-gold" href="#pricing">Get the Basic kit</a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
+        </div>
+        <div class="trust reveal d5">
+          <span><i></i>Three tiers, from $9</span>
+          <span><i></i>Arabic scripts included</span>
+          <span><i></i>No developer required</span>
+        </div>
+      </div>
+
+      <div class="reveal d3">
+        <div class="chat" role="img" aria-label="Sample WhatsApp conversation between the system and an Arabic-speaking buyer">
+          <div class="chat-top">
+            <div class="chat-av"></div>
+            <div>
+              <div class="who">COD Order Desk</div>
+              <div class="sub">online &middot; automated</div>
+            </div>
+            <div class="live">S1 &rarr; S7</div>
+          </div>
+          <div class="thread">
+            <div class="msg sys">
+              <div class="tag">S1 &middot; Order confirmation</div>
+              <div class="bubble" lang="ar" dir="rtl">&#1605;&#1585;&#1581;&#1576;&#1575;&#1611; &#1576;&#1603;&#1615;&#1605;&#1548; &#1578;&#1605; &#1575;&#1587;&#1578;&#1604;&#1575;&#1605; &#1591;&#1604;&#1576;&#1603;&#1605; COD-4821. &#1607;&#1604; &#1578;&#1572;&#1603;&#1583;&#1608;&#1606; &#1575;&#1604;&#1593;&#1606;&#1608;&#1575;&#1606; &#1601;&#1610; &#1575;&#1604;&#1585;&#1610;&#1575;&#1590;&#1567;<span class="en">Hello, we received your order COD-4821. Can you confirm the address in Riyadh?</span></div>
+            </div>
+            <div class="msg buyer">
+              <div class="tag">Buyer</div>
+              <div class="bubble" lang="ar" dir="rtl">&#1606;&#1593;&#1605;&#1548; &#1604;&#1603;&#1606; &#1610;&#1585;&#1580;&#1609; &#1575;&#1604;&#1578;&#1608;&#1589;&#1610;&#1604; &#1576;&#1593;&#1583; &#1575;&#1604;&#1587;&#1575;&#1593;&#1577; &#1575;&#1604;&#1582;&#1575;&#1605;&#1587;&#1577; &#1605;&#1587;&#1575;&#1569;&#1611;.<span class="en">Yes, but please deliver after 5 pm.</span></div>
+            </div>
+            <div class="msg sys">
+              <div class="tag">S3 &middot; Address verification</div>
+              <div class="bubble" lang="ar" dir="rtl">&#1588;&#1603;&#1585;&#1575;&#1611;! &#1607;&#1604; &#1575;&#1604;&#1593;&#1606;&#1608;&#1575;&#1606;: &#1588;&#1575;&#1585;&#1593; &#1575;&#1604;&#1605;&#1604;&#1603; &#1601;&#1607;&#1583;&#1548; &#1581;&#1610; &#1575;&#1604;&#1593;&#1604;&#1610;&#1575;&#1567;<span class="en">Thanks! Is the address: King Fahd Road, Al Olaya district?</span></div>
+            </div>
+            <div class="msg buyer">
+              <div class="tag">Buyer</div>
+              <div class="bubble" lang="ar" dir="rtl">&#1606;&#1593;&#1605; &#1589;&#1581;&#1610;&#1581;.<span class="en">Yes, correct.</span></div>
+            </div>
+          </div>
+          <div class="status-row">
+            <span class="chip ok">S1 Confirmed</span>
+            <span class="chip ok">S3 Address verified</span>
+            <span class="chip">S4 Reminder scheduled</span>
+          </div>
+        </div>
+        <p class="chat-note">The exact S1&ndash;S7 flow, running in Arabic &mdash; on WhatsApp, before the courier shows up.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problem">
+    <div class="wrap">
+      <div class="sec-head in">
+        <div class="kicker">The problem</div>
+        <h2>Rejections are not "the cost of doing business".</h2>
+        <p>In Saudi Arabia and the UAE, cash-on-delivery orders get refused at the door far more often than sellers expect. Every refused order is paid for twice.</p>
+      </div>
+
+      <div class="pain-grid">
+        <div class="in">
+          <div class="stat-cards">
+            <div class="stat">
+              <div class="big teal">35&ndash;40%</div>
+              <div class="lbl">Average COD rejection rate in KSA &amp; UAE</div>
+            </div>
+            <div class="stat">
+              <div class="big">$89</div>
+              <div class="lbl">Real cost of a single rejected order</div>
+            </div>
+            <div class="stat">
+              <div class="big">SAR 300</div>
+              <div class="lbl">Average order value (~$81)</div>
+            </div>
+            <div class="stat">
+              <div class="big">500</div>
+              <div class="lbl">Orders a month is where it really hurts</div>
+            </div>
+          </div>
+          <div class="pain-copy" style="margin-top:24px">
+            <p><strong>A rejected order doesn't just cost you the product.</strong> You eat the two-way freight, the support time spent chasing the buyer, and the collection fee you never earn. Add it up and one refusal burns roughly <strong>$89</strong>.</p>
+            <p>At 500 orders a month, that is money leaving the business every single month &mdash; quietly, and mostly to buyers who simply changed their mind.</p>
+            <p><strong>The fix is not logistics. It is talking to the buyer &mdash; in Arabic &mdash; before the courier shows up.</strong></p>
+          </div>
+        </div>
+
+        <div class="loss in">
+          <h3>Where one rejection's $89 goes</h3>
+          <div class="cap">Typical breakdown on a SAR 300 order (~$81).</div>
+          <table>
+            <tr><td>Two-way freight (out + return)</td><td>$34</td></tr>
+            <tr><td>Support and follow-up time</td><td>$18</td></tr>
+            <tr><td>Restocking and markdown loss</td><td>$17</td></tr>
+            <tr><td>COD collection fee, never earned</td><td>$12</td></tr>
+            <tr><td>Packaging and handling</td><td>$8</td></tr>
+            <tr class="total"><td>Cost per rejection</td><td>$89</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head in">
+        <div class="kicker">How it works</div>
+        <h2>One order, seven checkpoints.</h2>
+        <p>Every order moves through the same sequence. Each step writes its status back, so you always know exactly where a buyer stands &mdash; and what was sent, in which language.</p>
+      </div>
+
+      <div class="steps in">
+        <div class="step">
+          <div class="num">S1</div>
+          <div class="txt"><strong>Instant Arabic WhatsApp confirmation</strong><span>The buyer gets a confirmation in Arabic the moment the order lands.</span></div>
+          <div class="meta">immediate</div>
+        </div>
+        <div class="step">
+          <div class="num">S2</div>
+          <div class="txt"><strong>SMS follow-up</strong><span>No reply on WhatsApp? An SMS goes out automatically.</span></div>
+          <div class="meta">after 24h</div>
+        </div>
+        <div class="step">
+          <div class="num">S3</div>
+          <div class="txt"><strong>Six-question address verification</strong><span>The six questions that lock down a deliverable address.</span></div>
+          <div class="meta">up to 3 retries</div>
+        </div>
+        <div class="step">
+          <div class="num">S4</div>
+          <div class="txt"><strong>Pre-delivery reminder</strong><span>A heads-up so the buyer is home and expecting the courier.</span></div>
+          <div class="meta">before dispatch</div>
+        </div>
+        <div class="step">
+          <div class="num">S5</div>
+          <div class="txt"><strong>Golden-2h recovery</strong><span>If delivery fails, a resend or reschedule offer goes out within two hours.</span></div>
+          <div class="meta">within 2h</div>
+        </div>
+        <div class="step">
+          <div class="num">S6</div>
+          <div class="txt"><strong>Post-delivery review request</strong><span>Turn a delivered order into a review while the buyer is still happy.</span></div>
+          <div class="meta">after delivery</div>
+        </div>
+        <div class="step">
+          <div class="num">S7</div>
+          <div class="txt"><strong>Auto-logged rejection with A&ndash;G categories</strong><span>Every rejection is filed by cause, so you can see the pattern and fix it.</span></div>
+          <div class="meta">logged automatically</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="wrap">
+      <div class="sec-head in">
+        <div class="kicker">Pricing</div>
+        <h2>Three kits. Buy higher, get everything below it.</h2>
+        <p>Start with the scripts. Move up when you want the audio, the Meta templates, or the full automation. One-time payment, no subscription.</p>
+      </div>
+
+      <div class="tiers">
+        <div class="tier basic in">
+          <div class="tname">BASIC</div>
+          <div class="price">$9 <small>one-time</small></div>
+          <div class="tagline">Everything a solo COD seller needs to start cutting rejections this week.</div>
+          <ul>
+            <li>Cross-Border COD Toolkit Handbook</li>
+            <li>24 Arabic scripts across 7 scenarios</li>
+            <li>Rejection loss calculator (Excel, Sheets, Notion)</li>
+            <li>6-question address check card</li>
+            <li>Emergency script card</li>
+            <li>Pre-launch 15-point self-check</li>
+          </ul>
+          <!-- TODO: replace href with the Basic checkout link (Gumroad / Paddle) before going live -->
+          <a class="btn btn-ghost" href="#">Get the Basic kit</a>
+          <div class="buy-note">Digital download, delivered instantly</div>
+        </div>
+
+        <div class="tier pro in">
+          <span class="flag">Most popular</span>
+          <div class="tname">PRO</div>
+          <div class="price">$29 <small>one-time</small></div>
+          <div class="tagline">For sellers who are serious about COD &mdash; and about getting templates approved.</div>
+          <ul>
+            <li>Everything in the Basic kit</li>
+            <li>10 Arabic pronunciation MP3s</li>
+            <li>Rejection recovery decision tree (A&ndash;G)</li>
+            <li>Meta WhatsApp template submission pack (7 templates)</li>
+            <li>Platform rules &amp; compliance redlines (PDF)</li>
+            <li>Rejection ledger with A&ndash;G categories</li>
+            <li>Middle East holiday calendar 2026&ndash;2027</li>
+          </ul>
+          <!-- TODO: replace href with the Pro checkout link (Gumroad / Paddle) before going live -->
+          <a class="btn btn-gold" href="#">Get the Pro kit</a>
+          <div class="buy-note">Digital download, delivered instantly</div>
+        </div>
+
+        <div class="tier auto in">
+          <div class="tname">AUTOMATION</div>
+          <div class="price">$79 <small>one-time</small></div>
+          <div class="tagline">Run the whole flow automatically &mdash; and watch it work before you wire up a single API key.</div>
+          <ul>
+            <li>Everything in the Pro kit</li>
+            <li>117-node n8n workflow (S1&ndash;S7)</li>
+            <li>Mock demo suite: zero API keys, no GPU</li>
+            <li>Placeholder replacement checklist</li>
+            <li>Delivery checklist and README</li>
+          </ul>
+          <!-- TODO: replace href with the Automation checkout link (Gumroad / Paddle) before going live -->
+          <a class="btn btn-ghost" href="#">Get the Automation kit</a>
+          <div class="buy-note">Digital download, delivered instantly</div>
+        </div>
+      </div>
+
+      <p class="cumulative in"><strong>Buy higher, get everything below it.</strong> The Automation kit includes the full Pro and Basic content.</p>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section id="included">
+    <div class="wrap">
+      <div class="sec-head in">
+        <div class="kicker">What you get</div>
+        <h2>Line-by-line, what ships in each kit.</h2>
+        <p>No locked features you only discover after buying. This is the full contents list.</p>
+      </div>
+
+      <div class="in" style="overflow-x:auto">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th>Included</th>
+              <th>Basic &middot; $9</th>
+              <th>Pro &middot; $29</th>
+              <th>Automation &middot; $79</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Handbook, script library &amp; loss calculator</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+            <tr><td>6-question card &amp; emergency script card</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+            <tr><td>Sheets / Notion calculator</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+            <tr><td>10 Arabic pronunciation MP3s</td><td class="no">&mdash;</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+            <tr><td>Rejection recovery decision tree (A&ndash;G)</td><td class="no">&mdash;</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+            <tr><td>Meta WhatsApp template submission pack</td><td class="no">&mdash;</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+            <tr><td>Platform rules &amp; compliance redlines PDFs</td><td class="no">&mdash;</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+            <tr><td>Rejection ledger &amp; holiday calendar</td><td class="no">&mdash;</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+            <tr><td>n8n workflow (117 nodes, S1&ndash;S7)</td><td class="no">&mdash;</td><td class="no">&mdash;</td><td class="yes">Yes</td></tr>
+            <tr><td>Mock demo suite (runs with zero API keys)</td><td class="no">&mdash;</td><td class="no">&mdash;</td><td class="yes">Yes</td></tr>
+            <tr><td>Placeholder &amp; delivery checklists</td><td class="no">&mdash;</td><td class="no">&mdash;</td><td class="yes">Yes</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- REQUIREMENTS -->
+  <section id="requirements">
+    <div class="wrap">
+      <div class="sec-head in">
+        <div class="kicker">Requirements</div>
+        <h2>What you need before you start.</h2>
+        <p>The Basic and Pro kits are files you can open and use today. The Automation kit needs the tools below &mdash; and the demo suite runs without any of them.</p>
+      </div>
+
+      <div class="req-grid">
+        <div class="req in">
+          <h3>n8n instance</h3>
+          <p>Self-hosted or the n8n Cloud free tier. The mock demo runs locally with no API keys at all.</p>
+        </div>
+        <div class="req in">
+          <h3>WhatsApp Cloud API</h3>
+          <p>A Meta business account with verification, to send real messages once you go live.</p>
+        </div>
+        <div class="req in">
+          <h3>Basic n8n literacy</h3>
+          <p>Import a JSON file and set environment variables. No coding required.</p>
+        </div>
+      </div>
+
+      <div class="notes in">
+        <h3>Honest notes</h3>
+        <ul>
+          <li>Scripts are in Arabic (Saudi / Gulf dialect).</li>
+          <li>Content is AI-assisted; a native Arabic review is recommended before commercial launch.</li>
+          <li>This is a communication kit. It won't fix product selection or logistics.</li>
+          <li>Not legal advice. Platform rules change &mdash; verify before you deploy.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head in">
+        <div class="kicker">FAQ</div>
+        <h2>Questions buyers ask before checkout.</h2>
+      </div>
+
+      <div class="faq in">
+        <details open>
+          <summary>Do I need to know how to code?</summary>
+          <p>No. The Basic and Pro kits are scripts, spreadsheets and PDFs you use directly. The Automation kit asks only that you can import a JSON file into n8n and set a few environment variables. The included placeholder checklist tells you exactly which values to swap.</p>
+        </details>
+        <details>
+          <summary>Do I need a GPU?</summary>
+          <p>No. The AI compliance review runs on a cloud LLM with three environment variables, or you can flip the built-in skip-AI-review switch. The mock demo suite runs entirely on your machine &mdash; no GPU, no API keys.</p>
+        </details>
+        <details>
+          <summary>Which countries does this support?</summary>
+          <p>The scripts and templates are written for Saudi Arabia and the UAE (Saudi / Gulf Arabic). The workflow itself is country-agnostic &mdash; English and Southeast Asia language packs are on the roadmap.</p>
+        </details>
+        <details>
+          <summary>How do I pay, and how is the file delivered?</summary>
+          <p>Payments are processed by Paddle as merchant of record. You pay by card or PayPal, and your download link is delivered instantly after checkout. One purchase covers one personal or business use.</p>
+        </details>
+        <details>
+          <summary>What is your refund policy?</summary>
+          <p>Because these are digital products, purchases are non-refundable once the download link has been delivered. If something is broken or missing, contact us and we will make it right.</p>
+        </details>
+        <details>
+          <summary>Is this legal or tax advice?</summary>
+          <p>No. The compliance material covers platform rules and cultural guardrails for messaging &mdash; it is not legal advice. Rules change, so verify current requirements before you deploy.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand"><span class="mark"></span>COD Anti-Rejection Toolkit</div>
+        <p>Copy-paste kits for cross-border cash-on-delivery sellers in Saudi Arabia and the UAE. Built from real COD operations, not growth hacks.</p>
+      </div>
+      <div class="foot">
+        <h4>Contact</h4>
+        <ul>
+          <!-- TODO: replace cod-kpi@example.com with your real support address before going live -->
+          <li>Support: <a class="mail" href="mailto:cod-kpi@example.com">cod-kpi@example.com</a></li>
+          <li>Replies within 1&ndash;2 business days</li>
+        </ul>
+      </div>
+      <div class="foot">
+        <h4>On this page</h4>
+        <ul>
+          <li><a href="#problem">The problem</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="legal">
+      <p><strong>Merchant of record.</strong> Payments on this store are processed by Paddle as merchant of record. Paddle handles checkout, tax and invoicing on our behalf; your card statement will show Paddle.</p>
+      <p><strong>Refunds.</strong> Digital products are non-refundable once the download link has been delivered. If a file is missing or corrupted, contact us and we will replace it.</p>
+      <p><strong>Terms.</strong> One purchase grants one personal or business use. You may adapt the scripts and workflow for your own store. Redistribution or resale of the kits is not permitted.</p>
+      <p>&copy; 2026 COD Anti-Rejection Toolkit. Product names and prices shown in USD.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Single, restrained entrance animation: sections fade in once as they enter the viewport.
+  (function () {
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items = document.querySelectorAll('.in');
+    if (reduced || !('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('vis'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('vis');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+</body>
+</html>
